@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Open_san_SemiBold" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/darkBLUE</item>
+
+    </style>
+
+    <style name="Trirong_regular" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/trirong</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/text_label</item>
+    </style>
+
+
+</resources>

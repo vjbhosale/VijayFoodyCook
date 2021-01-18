@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLayout"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/meal_titleTV"
+            style="@style/Trirong_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="230dp"
+
+            android:fontFamily="@font/trirong"
+            android:lineSpacingExtra="-12dp"
+            android:maxLines="2"
+            android:text="momos"
+            android:textSize="16dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bookmarkIMG"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_bookmark_unselect"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="220dp"
+            android:padding="12dp"
+            />
+
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/mealIMG"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_hip_hop"
+                />
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
