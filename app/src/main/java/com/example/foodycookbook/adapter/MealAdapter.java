@@ -42,6 +42,7 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
 
+        // selection logic using idMeal parameter
 
         if (selectedList.size()==0)
         {
@@ -80,8 +81,8 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.ViewHolder> {
        holder.bookmarkIMG.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-           //    holder.bookmarkIMG.setImageDrawable(mainActivity.getDrawable(R.drawable.ic_bookmark_selected));
 
+               // selection logic using idMeal parameter
                if (selectedList.size()==0)
                {
                    selectedList.add(mealsList.get(position).idMeal);

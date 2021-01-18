@@ -26,6 +26,7 @@ public class MainActivityViewModel extends AndroidViewModel {
    public     MutableLiveData<MealData> mealList=new MutableLiveData<MealData>();
 
 
+    // random api
     public void getRandomMeals() {
         Call call = apiInterface.getRandomMeals();
         call.enqueue(new Callback() {
@@ -42,6 +43,7 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     }
 
+    // search api
     public void searchForMeal(String searchS) {
 
         Call call=apiInterface.searchMeal(searchS);

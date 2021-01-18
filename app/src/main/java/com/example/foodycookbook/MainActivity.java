@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (isInternetOn())
         {
-
+            // random api call
             mainActivityViewModel.getRandomMeals();
 
         }
@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         mainActivityViewModel.mealList.observe(this, new Observer<MealData>() {
             @Override
             public void onChanged(MealData mealData) {
+                // adding data into list
                 mealAdapter.addData(mealData.meals);
 
             }
@@ -86,11 +87,16 @@ public class MainActivity extends AppCompatActivity {
 
                 if (!editable.toString().trim().isEmpty() )
                 {
-                    mainActivityViewModel.searchForMeal(editable.toString());
+                    if (isInternetOn()) {
+                        // search api
+                        mainActivityViewModel.searchForMeal(editable.toString());
+                    }
                 }else {
 
-                    if (mainActivityViewModel.mealList.getValue().meals!=null)
-                    mainActivityViewModel.mealList.getValue().meals.clear();
+                    if (mainActivityViewModel.mealList.getValue().meals!=null){
+                        mainActivityViewModel.mealList.getValue().meals.clear();
+                    }
+
 
                     
                     mealAdapter.addData(null);
@@ -109,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    // internet check
     public boolean isInternetOn() {
 
         // get Connectivity Manager object to check connection
